@@ -1,0 +1,126 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main .wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.main .wrapper .slide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main .wrapper .slide::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.main .wrapper .slide .image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main .wrapper .slide .content {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.main .wrapper .slide .content .text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main .wrapper .slide .content h2 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.main .wrapper .slide .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  text-decoration: none;
+  color: #333;
+  border-radius: 20px;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+
+.main .wrapper .slide .btn:hover {
+  background: #c87e4f;
+  color: #fff;
+}
+
+.main .nav-btn {
+  height: 50px;
+  width: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.main .nav-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.main .swiper-button-next {
+  right: 50px;
+}
+
+.main .swiper-button-prev {
+  left: 50px;
+}
+
+.main .nav-btn::before,
+.main .nav-btn::after {
+  font-size: 25px;
+  color: #fff;
+}
+
+.main .swiper-pagination-bullet {
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+}
+
+.main .swiper-pagination-bullet-active {
+  border: 2px solid #fff;
+  background-color: #c87e4f;
+}
+
+@media (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
+}
